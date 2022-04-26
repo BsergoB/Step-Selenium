@@ -29,13 +29,11 @@ public class AbstractPage {
 
     //Click Method
     public void click(By elementBy) {
-        //waitVisibility(elementBy);
         waitToBeClickable(elementBy);
         driver.findElement(elementBy).click();
     }
     //Is Element Displayed Method
     public void isElementDisplayed(By elementBy) {
-        //waitVisibility(elementBy);
         waitToBeClickable(elementBy);
         assertTrue(driver.findElement(elementBy).isDisplayed());
     }
