@@ -6,19 +6,15 @@ import org.openqa.selenium.WebDriver;
 public class DashBoardPage extends AbstractPage {
     String plansTab  = "//li[contains(@ng-class, 'plans')]";
     String newPlanButton = "//button[text()='New plan']";
-    //String nameHeader = "th.sorting > header";
     String keywordsTab  = "//li[contains(@ng-class, 'functions')]";
     String newKeywordButton = "//button[text()='New keyword']";
-    //String typeHeader = "th.sorting:nth-child(2) > header";
 
     String parametersTab  = "//li[contains(@ng-class, 'parameters')]";
     String newParameterButton = "//button[text()='New parameter']";
-    String keyHeader = ".sorting_asc > header";
     String executionsTab  = "//li[contains(@ng-class, 'executions')]";
     String executionsList = "//a[@ng-click=\"selectTab(tab.id)\"]";
     String schedulerTab  = "//li[contains(@ng-class, 'scheduler')]";
     String newTaskButton = "//button[text()='New task']";
-    //String cronExpression = "th.sorting:nth-child(3) > header";
     String gridTab  = "//li[contains(@ng-class, 'grid')]";
     String tokens = "//li[@heading='Tokens']";
     String adminTab  = "//li[contains(@ng-class, 'admin')]";
