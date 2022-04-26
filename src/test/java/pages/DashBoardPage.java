@@ -4,75 +4,79 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class DashBoardPage extends AbstractPage {
-    String plansTab  = "ul.nav.navbar-nav li[ng-class*=\"plans\"]";
-    String nameHeader = "th.sorting > header";
-    String keywordsTab  = "ul.nav.navbar-nav li[ng-class*=\"function\"]";
-    String typeHeader = "th.sorting:nth-child(2) > header";
+    String plansTab  = "//li[contains(@ng-class, 'plans')]";
+    String newPlanButton = "//button[text()='New plan']";
+    //String nameHeader = "th.sorting > header";
+    String keywordsTab  = "//li[contains(@ng-class, 'functions')]";
+    String newKeywordButton = "//button[text()='New keyword']";
+    //String typeHeader = "th.sorting:nth-child(2) > header";
 
-    String parametersTab  = "ul.nav.navbar-nav li[ng-class*=\"parameters\"]";
+    String parametersTab  = "//li[contains(@ng-class, 'parameters')]";
+    String newParameterButton = "//button[text()='New parameter']";
     String keyHeader = ".sorting_asc > header";
-    String executionsTab  = "ul.nav.navbar-nav li[ng-class*=\"executions\"]";
+    String executionsTab  = "//li[contains(@ng-class, 'executions')]";
     String executionsList = "//a[@ng-click=\"selectTab(tab.id)\"]";
-    String schedulerTab  = "ul.nav.navbar-nav li[ng-class*=\"scheduler\"]";
-    String cronExpression = "th.sorting:nth-child(3) > header";
-    String gridTab  = "ul.nav.navbar-nav li[ng-class*=\"grid\"]";
-    String tokens = "ul.nav.nav-tabs li.uib-tab:nth-child(3) > a";
-    String adminTab  = "ul.nav.navbar-nav li[ng-class*=\"admin\"]";
-    String settings = "ul.nav.nav-tabs li.uib-tab:nth-child(2) > a";
+    String schedulerTab  = "//li[contains(@ng-class, 'scheduler')]";
+    String newTaskButton = "//button[text()='New task']";
+    //String cronExpression = "th.sorting:nth-child(3) > header";
+    String gridTab  = "//li[contains(@ng-class, 'grid')]";
+    String tokens = "//li[@heading='Tokens']";
+    String adminTab  = "//li[contains(@ng-class, 'admin')]";
+    String addUserButton = "//button[text()='Add user']";
     public DashBoardPage(WebDriver driver) {
         super(driver);
     }
     public void checkPlansTab() {
-        isElementDisplayed(By.cssSelector(this.nameHeader));
+        isElementDisplayed(By.xpath(this.newPlanButton));
         System.out.println("Plans Tab is checked!");
     }
     public void clickKeywordsTab() {
-        click(By.cssSelector(this.keywordsTab));
+        click(By.xpath(this.keywordsTab));
     }
 
     public void checkKeywordsTab() {
-        isElementDisplayed(By.cssSelector(this.typeHeader));
+        isElementDisplayed(By.xpath(this.newKeywordButton));
         System.out.println("Keywords Tab is checked!");
     }
 
     public void clickParametersTab() {
-        click(By.cssSelector(this.parametersTab));
+        click(By.xpath(this.parametersTab));
     }
 
     public void checkParametersTab() {
-        isElementDisplayed(By.cssSelector(this.keyHeader));
+        isElementDisplayed(By.xpath(this.newParameterButton));
         System.out.println("Parameters Tab is checked!");
     }
 
     public void clickExecutionsTab() {
-        click(By.cssSelector(this.executionsTab));
+        click(By.xpath(this.executionsTab));
     }
     public void checkExecutionsTab() {
         isElementDisplayed(By.xpath(this.executionsList));
         System.out.println("Executions Tab is checked!");
     }
     public void clickSchedulerTab() {
-        click(By.cssSelector(this.schedulerTab));
+        click(By.xpath(this.schedulerTab));
     }
     public void checkSchedulerTab() {
-        isElementDisplayed(By.cssSelector(this.cronExpression));
+        isElementDisplayed(By.xpath(this.newTaskButton));
         System.out.println("Scheduler Tab is checked!");
     }
     public void clickGridTab() {
-        click(By.cssSelector(this.gridTab));
+        click(By.xpath(this.gridTab));
     }
     public void checkGridTab() {
-        isElementDisplayed(By.cssSelector(this.tokens));
+        isElementDisplayed(By.xpath(this.tokens));
         System.out.println("Grid Tab is checked!");
     }
     public void clickAdminTab() {
-        click(By.cssSelector(this.adminTab));
+        click(By.xpath(this.adminTab));
     }
     public void checkAdminTab() {
-        isElementDisplayed(By.cssSelector(this.settings));
+        isElementDisplayed(By.xpath(this.addUserButton));
         System.out.println("Admin Tab is checked!");
     }
     public void clickPlansTab() {
-        click(By.cssSelector(this.plansTab));
+        click(By.xpath(this.plansTab));
     }
 }
